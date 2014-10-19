@@ -1,4 +1,5 @@
 --color
 --format documentation
+--tag ~js
 --require spec_helper
 --require rails_helper

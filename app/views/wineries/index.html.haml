@@ -1,0 +1,19 @@
+%h1 Listing wineries
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @wineries.each do |winery|
+    %tr
+      %td= winery.name
+      %td= link_to 'Show', winery
+      %td= link_to 'Edit', edit_winery_path(winery)
+      %td= link_to 'Destroy', winery, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Winery', new_winery_path
