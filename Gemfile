@@ -22,8 +22,10 @@ group :development do
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'html2haml'
   gem 'hub', :require=>nil
-  gem 'quiet_assets'
   gem 'rails_layout'
+  gem 'guard-rspec', require: false
+  gem 'guard-livereload', require: false
+  gem "rack-livereload"
 end
 group :development, :test do
   gem 'factory_girl_rails'
