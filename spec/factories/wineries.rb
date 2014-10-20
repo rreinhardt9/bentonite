@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :winery do
-    name "#{Faker::Address.street_name} Winery"
+    sequence(:name) { "#{Faker::Address.street_name} Winery" }
+    user
   end
 
   factory :invalid_winery, class: Winery do

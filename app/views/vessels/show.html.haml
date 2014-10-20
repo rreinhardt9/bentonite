@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @vessel.name
+%p
+  %b Capacity:
+  = @vessel.capacity
+%p
+  %b Active:
+  = @vessel.active
+%p
+  %b Winery:
+  = @vessel.winery
+
+= link_to 'Edit', edit_vessel_path(@vessel)
+\|
+= link_to 'Back', vessels_path

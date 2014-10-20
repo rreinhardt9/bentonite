@@ -1,0 +1,25 @@
+%h1 Listing vessels
+
+%table
+  %tr
+    %th Name
+    %th Capacity
+    %th Active
+    %th Winery
+    %th
+    %th
+    %th
+
+  - @vessels.each do |vessel|
+    %tr
+      %td= vessel.name
+      %td= vessel.capacity
+      %td= vessel.active
+      %td= vessel.winery
+      %td= link_to 'Show', vessel
+      %td= link_to 'Edit', edit_vessel_path(vessel)
+      %td= link_to 'Destroy', vessel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Vessel', new_vessel_path

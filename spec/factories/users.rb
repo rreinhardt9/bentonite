@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :user do
-    name "Test User"
-    email "test@example.com"
-    password "please123"
+    sequence(:name) { Faker::Name.name }
+    sequence(:email) { Faker::Internet.email }
+    password Faker::Internet.password(8)
 
     trait :admin do
       role 'admin'

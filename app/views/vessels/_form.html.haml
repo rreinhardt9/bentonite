@@ -1,0 +1,11 @@
+= simple_form_for(@winery.vessels.new) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :capacity
+    = f.input :active
+    = f.input :winery_id, as: :hidden
+
+  .form-actions
+    = f.button :submit
