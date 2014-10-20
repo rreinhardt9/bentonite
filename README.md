@@ -18,6 +18,9 @@ Getting Started
 Documentation and Support
 -------------------------
 
+Run `rake generate_erd` to regenerate (must have graphvis).
+![](/erd.png)
+
 Issues
 -------------
 
